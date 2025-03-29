@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at CNC_driver.v(34): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at CNC_driver.v(166): always construct contains both blocking and non-blocking assignments

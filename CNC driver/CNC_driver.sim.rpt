@@ -1,0 +1,843 @@
+Simulator report for CNC_driver
+Sat Mar 29 15:11:47 2025
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 20.0 ms      ;
+; Simulation Netlist Size     ; 424 nodes    ;
+; Simulation Coverage         ;      61.08 % ;
+; Total Number of Transitions ; 559634       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Stratix II   ;
+; Device                      ; EP2S15F484C3 ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Timing         ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; CNC_driver.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      61.08 % ;
+; Total nodes checked                                 ; 424          ;
+; Total output ports checked                          ; 483          ;
+; Total output ports with complete 1/0-value coverage ; 295          ;
+; Total output ports with no 1/0-value coverage       ; 188          ;
+; Total output ports with no 1-value coverage         ; 188          ;
+; Total output ports with no 0-value coverage         ; 188          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                              ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |CNC_driver|acc[0]~reg0           ; |CNC_driver|acc[0]~reg0           ; regout           ;
+; |CNC_driver|acc[1]~reg0           ; |CNC_driver|acc[1]~reg0           ; regout           ;
+; |CNC_driver|acc[2]~reg0           ; |CNC_driver|acc[2]~reg0           ; regout           ;
+; |CNC_driver|acc[3]~reg0           ; |CNC_driver|acc[3]~reg0           ; regout           ;
+; |CNC_driver|buffer1[1]~reg0       ; |CNC_driver|buffer1[1]~reg0       ; regout           ;
+; |CNC_driver|buffer1[2]~reg0       ; |CNC_driver|buffer1[2]~reg0       ; regout           ;
+; |CNC_driver|buffer1[3]~reg0       ; |CNC_driver|buffer1[3]~reg0       ; regout           ;
+; |CNC_driver|buffer2[0]~reg0       ; |CNC_driver|buffer2[0]~reg0       ; regout           ;
+; |CNC_driver|buffer2[1]~reg0       ; |CNC_driver|buffer2[1]~reg0       ; regout           ;
+; |CNC_driver|buffer2[2]~reg0       ; |CNC_driver|buffer2[2]~reg0       ; regout           ;
+; |CNC_driver|buffer3[0]~reg0       ; |CNC_driver|buffer3[0]~reg0       ; regout           ;
+; |CNC_driver|buffer3[2]~reg0       ; |CNC_driver|buffer3[2]~reg0       ; regout           ;
+; |CNC_driver|buffer4[0]~reg0       ; |CNC_driver|buffer4[0]~reg0       ; regout           ;
+; |CNC_driver|buffer4[1]~reg0       ; |CNC_driver|buffer4[1]~reg0       ; regout           ;
+; |CNC_driver|wait_to_write[0]~reg0 ; |CNC_driver|wait_to_write[0]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[1]~reg0 ; |CNC_driver|wait_to_write[1]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[2]~reg0 ; |CNC_driver|wait_to_write[2]~reg0 ; regout           ;
+; |CNC_driver|Add6~5                ; |CNC_driver|Add6~5                ; sumout           ;
+; |CNC_driver|Add6~5                ; |CNC_driver|Add6~6                ; cout             ;
+; |CNC_driver|Add6~9                ; |CNC_driver|Add6~9                ; sumout           ;
+; |CNC_driver|Add6~9                ; |CNC_driver|Add6~10               ; cout             ;
+; |CNC_driver|Add6~13               ; |CNC_driver|Add6~13               ; sumout           ;
+; |CNC_driver|Add6~13               ; |CNC_driver|Add6~14               ; cout             ;
+; |CNC_driver|Add6~17               ; |CNC_driver|Add6~17               ; sumout           ;
+; |CNC_driver|Add6~17               ; |CNC_driver|Add6~18               ; cout             ;
+; |CNC_driver|Add6~21               ; |CNC_driver|Add6~21               ; sumout           ;
+; |CNC_driver|cnt2[6]               ; |CNC_driver|cnt2[6]               ; regout           ;
+; |CNC_driver|cnt2[3]               ; |CNC_driver|cnt2[3]               ; regout           ;
+; |CNC_driver|cnt2[2]               ; |CNC_driver|cnt2[2]               ; regout           ;
+; |CNC_driver|cnt2[5]               ; |CNC_driver|cnt2[5]               ; regout           ;
+; |CNC_driver|cnt2[0]               ; |CNC_driver|cnt2[0]               ; regout           ;
+; |CNC_driver|cnt2[1]               ; |CNC_driver|cnt2[1]               ; regout           ;
+; |CNC_driver|cnt2[4]               ; |CNC_driver|cnt2[4]               ; regout           ;
+; |CNC_driver|cnt1[10]              ; |CNC_driver|cnt1[10]              ; regout           ;
+; |CNC_driver|cnt1[5]               ; |CNC_driver|cnt1[5]               ; regout           ;
+; |CNC_driver|cnt1[3]               ; |CNC_driver|cnt1[3]               ; regout           ;
+; |CNC_driver|cnt1[2]               ; |CNC_driver|cnt1[2]               ; regout           ;
+; |CNC_driver|cnt1[1]               ; |CNC_driver|cnt1[1]               ; regout           ;
+; |CNC_driver|cnt1[4]               ; |CNC_driver|cnt1[4]               ; regout           ;
+; |CNC_driver|cnt1[0]               ; |CNC_driver|cnt1[0]               ; regout           ;
+; |CNC_driver|cnt1[9]               ; |CNC_driver|cnt1[9]               ; regout           ;
+; |CNC_driver|cnt1[6]               ; |CNC_driver|cnt1[6]               ; regout           ;
+; |CNC_driver|cnt1[8]               ; |CNC_driver|cnt1[8]               ; regout           ;
+; |CNC_driver|cnt1[7]               ; |CNC_driver|cnt1[7]               ; regout           ;
+; |CNC_driver|Add7~5                ; |CNC_driver|Add7~5                ; sumout           ;
+; |CNC_driver|Add7~9                ; |CNC_driver|Add7~9                ; sumout           ;
+; |CNC_driver|Add7~9                ; |CNC_driver|Add7~10               ; cout             ;
+; |CNC_driver|Add7~13               ; |CNC_driver|Add7~13               ; sumout           ;
+; |CNC_driver|Add7~13               ; |CNC_driver|Add7~14               ; cout             ;
+; |CNC_driver|Add7~17               ; |CNC_driver|Add7~17               ; sumout           ;
+; |CNC_driver|Add7~17               ; |CNC_driver|Add7~18               ; cout             ;
+; |CNC_driver|Add7~21               ; |CNC_driver|Add7~21               ; sumout           ;
+; |CNC_driver|Add7~21               ; |CNC_driver|Add7~22               ; cout             ;
+; |CNC_driver|Add7~25               ; |CNC_driver|Add7~25               ; sumout           ;
+; |CNC_driver|Add7~25               ; |CNC_driver|Add7~26               ; cout             ;
+; |CNC_driver|Add7~29               ; |CNC_driver|Add7~29               ; sumout           ;
+; |CNC_driver|Add7~29               ; |CNC_driver|Add7~30               ; cout             ;
+; |CNC_driver|Add7~33               ; |CNC_driver|Add7~33               ; sumout           ;
+; |CNC_driver|Add3~1                ; |CNC_driver|Add3~1                ; sumout           ;
+; |CNC_driver|Add3~1                ; |CNC_driver|Add3~2                ; cout             ;
+; |CNC_driver|Add5~1                ; |CNC_driver|Add5~1                ; sumout           ;
+; |CNC_driver|Add5~1                ; |CNC_driver|Add5~2                ; cout             ;
+; |CNC_driver|Add3~5                ; |CNC_driver|Add3~5                ; sumout           ;
+; |CNC_driver|Add3~5                ; |CNC_driver|Add3~6                ; cout             ;
+; |CNC_driver|Add5~5                ; |CNC_driver|Add5~5                ; sumout           ;
+; |CNC_driver|Add5~5                ; |CNC_driver|Add5~6                ; cout             ;
+; |CNC_driver|Add3~9                ; |CNC_driver|Add3~9                ; sumout           ;
+; |CNC_driver|Add5~9                ; |CNC_driver|Add5~9                ; sumout           ;
+; |CNC_driver|Add5~9                ; |CNC_driver|Add5~10               ; cout             ;
+; |CNC_driver|Add5~13               ; |CNC_driver|Add5~13               ; sumout           ;
+; |CNC_driver|Add5~13               ; |CNC_driver|Add5~14               ; cout             ;
+; |CNC_driver|Add5~17               ; |CNC_driver|Add5~17               ; sumout           ;
+; |CNC_driver|Add5~17               ; |CNC_driver|Add5~18               ; cout             ;
+; |CNC_driver|Add5~21               ; |CNC_driver|Add5~21               ; sumout           ;
+; |CNC_driver|Add5~21               ; |CNC_driver|Add5~22               ; cout             ;
+; |CNC_driver|Add5~25               ; |CNC_driver|Add5~25               ; sumout           ;
+; |CNC_driver|Add5~25               ; |CNC_driver|Add5~26               ; cout             ;
+; |CNC_driver|Add5~29               ; |CNC_driver|Add5~29               ; sumout           ;
+; |CNC_driver|Add1~1                ; |CNC_driver|Add1~1                ; sumout           ;
+; |CNC_driver|Add1~1                ; |CNC_driver|Add1~2                ; cout             ;
+; |CNC_driver|Add1~5                ; |CNC_driver|Add1~5                ; sumout           ;
+; |CNC_driver|Add1~5                ; |CNC_driver|Add1~6                ; cout             ;
+; |CNC_driver|Add1~9                ; |CNC_driver|Add1~9                ; sumout           ;
+; |CNC_driver|Add1~9                ; |CNC_driver|Add1~10               ; cout             ;
+; |CNC_driver|Add1~13               ; |CNC_driver|Add1~13               ; sumout           ;
+; |CNC_driver|Add1~13               ; |CNC_driver|Add1~14               ; cout             ;
+; |CNC_driver|Add1~17               ; |CNC_driver|Add1~17               ; sumout           ;
+; |CNC_driver|Add1~17               ; |CNC_driver|Add1~18               ; cout             ;
+; |CNC_driver|Add1~21               ; |CNC_driver|Add1~21               ; sumout           ;
+; |CNC_driver|Add1~21               ; |CNC_driver|Add1~22               ; cout             ;
+; |CNC_driver|Add1~25               ; |CNC_driver|Add1~25               ; sumout           ;
+; |CNC_driver|Add1~25               ; |CNC_driver|Add1~26               ; cout             ;
+; |CNC_driver|Add0~1                ; |CNC_driver|Add0~1                ; sumout           ;
+; |CNC_driver|Add0~1                ; |CNC_driver|Add0~2                ; cout             ;
+; |CNC_driver|Add0~5                ; |CNC_driver|Add0~5                ; sumout           ;
+; |CNC_driver|Add0~5                ; |CNC_driver|Add0~6                ; cout             ;
+; |CNC_driver|Add0~9                ; |CNC_driver|Add0~9                ; sumout           ;
+; |CNC_driver|Add0~9                ; |CNC_driver|Add0~10               ; cout             ;
+; |CNC_driver|Add0~13               ; |CNC_driver|Add0~13               ; sumout           ;
+; |CNC_driver|Add0~13               ; |CNC_driver|Add0~14               ; cout             ;
+; |CNC_driver|Add0~17               ; |CNC_driver|Add0~17               ; sumout           ;
+; |CNC_driver|Add0~17               ; |CNC_driver|Add0~18               ; cout             ;
+; |CNC_driver|Add0~21               ; |CNC_driver|Add0~21               ; sumout           ;
+; |CNC_driver|Add0~21               ; |CNC_driver|Add0~22               ; cout             ;
+; |CNC_driver|Add0~25               ; |CNC_driver|Add0~25               ; sumout           ;
+; |CNC_driver|Add0~25               ; |CNC_driver|Add0~26               ; cout             ;
+; |CNC_driver|Add0~29               ; |CNC_driver|Add0~29               ; sumout           ;
+; |CNC_driver|Add0~29               ; |CNC_driver|Add0~30               ; cout             ;
+; |CNC_driver|Add0~33               ; |CNC_driver|Add0~33               ; sumout           ;
+; |CNC_driver|Add0~33               ; |CNC_driver|Add0~34               ; cout             ;
+; |CNC_driver|Add0~37               ; |CNC_driver|Add0~37               ; sumout           ;
+; |CNC_driver|Add0~37               ; |CNC_driver|Add0~38               ; cout             ;
+; |CNC_driver|Add0~41               ; |CNC_driver|Add0~41               ; sumout           ;
+; |CNC_driver|Add0~41               ; |CNC_driver|Add0~42               ; cout             ;
+; |CNC_driver|temp1[0]~2            ; |CNC_driver|temp1[0]~2            ; combout          ;
+; |CNC_driver|temp4~0               ; |CNC_driver|temp4~0               ; combout          ;
+; |CNC_driver|flag_T~0              ; |CNC_driver|flag_T~0              ; combout          ;
+; |CNC_driver|pinout~reg0           ; |CNC_driver|pinout~reg0           ; regout           ;
+; |CNC_driver|clk1~reg0             ; |CNC_driver|clk1~reg0             ; regout           ;
+; |CNC_driver|Pulse~0               ; |CNC_driver|Pulse~0               ; combout          ;
+; |CNC_driver|flag_T~reg0           ; |CNC_driver|flag_T~reg0           ; regout           ;
+; |CNC_driver|Nbuff[0]~reg0         ; |CNC_driver|Nbuff[0]~reg0         ; regout           ;
+; |CNC_driver|Nbuff[1]~reg0         ; |CNC_driver|Nbuff[1]~reg0         ; regout           ;
+; |CNC_driver|Nbuff[2]~reg0         ; |CNC_driver|Nbuff[2]~reg0         ; regout           ;
+; |CNC_driver|flag_full~reg0        ; |CNC_driver|flag_full~reg0        ; regout           ;
+; |CNC_driver|temp4[0]~reg0         ; |CNC_driver|temp4[0]~reg0         ; regout           ;
+; |CNC_driver|temp3[0]~reg0         ; |CNC_driver|temp3[0]~reg0         ; regout           ;
+; |CNC_driver|temp1[0]~reg0         ; |CNC_driver|temp1[0]~reg0         ; regout           ;
+; |CNC_driver|temp2[0]~reg0         ; |CNC_driver|temp2[0]~reg0         ; regout           ;
+; |CNC_driver|Nx_temp_test~0        ; |CNC_driver|Nx_temp_test~0        ; combout          ;
+; |CNC_driver|Nx_temp_test~1        ; |CNC_driver|Nx_temp_test~1        ; combout          ;
+; |CNC_driver|Nx_temp_test~2        ; |CNC_driver|Nx_temp_test~2        ; combout          ;
+; |CNC_driver|Nx_temp_test~3        ; |CNC_driver|Nx_temp_test~3        ; combout          ;
+; |CNC_driver|Nx_temp_test~4        ; |CNC_driver|Nx_temp_test~4        ; combout          ;
+; |CNC_driver|Nx_temp_test~5        ; |CNC_driver|Nx_temp_test~5        ; combout          ;
+; |CNC_driver|Nx_temp_test~6        ; |CNC_driver|Nx_temp_test~6        ; combout          ;
+; |CNC_driver|Nx_temp_test~7        ; |CNC_driver|Nx_temp_test~7        ; combout          ;
+; |CNC_driver|allow_once~reg0       ; |CNC_driver|allow_once~reg0       ; regout           ;
+; |CNC_driver|pre_flag              ; |CNC_driver|pre_flag              ; regout           ;
+; |CNC_driver|always1~0             ; |CNC_driver|always1~0             ; combout          ;
+; |CNC_driver|posi[0]               ; |CNC_driver|posi[0]               ; regout           ;
+; |CNC_driver|pre_LS                ; |CNC_driver|pre_LS                ; regout           ;
+; |CNC_driver|posi~0                ; |CNC_driver|posi~0                ; combout          ;
+; |CNC_driver|posi[2]               ; |CNC_driver|posi[2]               ; regout           ;
+; |CNC_driver|posi~1                ; |CNC_driver|posi~1                ; combout          ;
+; |CNC_driver|Equal23~0             ; |CNC_driver|Equal23~0             ; combout          ;
+; |CNC_driver|posi[1]               ; |CNC_driver|posi[1]               ; regout           ;
+; |CNC_driver|Add4~0                ; |CNC_driver|Add4~0                ; combout          ;
+; |CNC_driver|acc~0                 ; |CNC_driver|acc~0                 ; combout          ;
+; |CNC_driver|Equal27~0             ; |CNC_driver|Equal27~0             ; combout          ;
+; |CNC_driver|posi~2                ; |CNC_driver|posi~2                ; combout          ;
+; |CNC_driver|acc~1                 ; |CNC_driver|acc~1                 ; combout          ;
+; |CNC_driver|acc~2                 ; |CNC_driver|acc~2                 ; combout          ;
+; |CNC_driver|acc~3                 ; |CNC_driver|acc~3                 ; combout          ;
+; |CNC_driver|LessThan5~0           ; |CNC_driver|LessThan5~0           ; combout          ;
+; |CNC_driver|LessThan5~1           ; |CNC_driver|LessThan5~1           ; combout          ;
+; |CNC_driver|LessThan5~2           ; |CNC_driver|LessThan5~2           ; combout          ;
+; |CNC_driver|LessThan5~5           ; |CNC_driver|LessThan5~5           ; combout          ;
+; |CNC_driver|LessThan1~2           ; |CNC_driver|LessThan1~2           ; combout          ;
+; |CNC_driver|Equal1~0              ; |CNC_driver|Equal1~0              ; combout          ;
+; |CNC_driver|LessThan1~3           ; |CNC_driver|LessThan1~3           ; combout          ;
+; |CNC_driver|clk1~1                ; |CNC_driver|clk1~1                ; combout          ;
+; |CNC_driver|Equal0~0              ; |CNC_driver|Equal0~0              ; combout          ;
+; |CNC_driver|Equal0~1              ; |CNC_driver|Equal0~1              ; combout          ;
+; |CNC_driver|LessThan0~1           ; |CNC_driver|LessThan0~1           ; combout          ;
+; |CNC_driver|always0~1             ; |CNC_driver|always0~1             ; combout          ;
+; |CNC_driver|always0~2             ; |CNC_driver|always0~2             ; combout          ;
+; |CNC_driver|always0~3             ; |CNC_driver|always0~3             ; combout          ;
+; |CNC_driver|pre_WR                ; |CNC_driver|pre_WR                ; regout           ;
+; |CNC_driver|Equal9~0              ; |CNC_driver|Equal9~0              ; combout          ;
+; |CNC_driver|Nbuff~0               ; |CNC_driver|Nbuff~0               ; combout          ;
+; |CNC_driver|Nbuff~1               ; |CNC_driver|Nbuff~1               ; combout          ;
+; |CNC_driver|buffer2~1             ; |CNC_driver|buffer2~1             ; combout          ;
+; |CNC_driver|buffer2~2             ; |CNC_driver|buffer2~2             ; combout          ;
+; |CNC_driver|buffer2~3             ; |CNC_driver|buffer2~3             ; combout          ;
+; |CNC_driver|Equal11~1             ; |CNC_driver|Equal11~1             ; combout          ;
+; |CNC_driver|Equal10~1             ; |CNC_driver|Equal10~1             ; combout          ;
+; |CNC_driver|always0~4             ; |CNC_driver|always0~4             ; combout          ;
+; |CNC_driver|buffer3~1             ; |CNC_driver|buffer3~1             ; combout          ;
+; |CNC_driver|buffer3~2             ; |CNC_driver|buffer3~2             ; combout          ;
+; |CNC_driver|Equal12~1             ; |CNC_driver|Equal12~1             ; combout          ;
+; |CNC_driver|Equal13~0             ; |CNC_driver|Equal13~0             ; combout          ;
+; |CNC_driver|buffer4~1             ; |CNC_driver|buffer4~1             ; combout          ;
+; |CNC_driver|Equal13~1             ; |CNC_driver|Equal13~1             ; combout          ;
+; |CNC_driver|Nbuff~2               ; |CNC_driver|Nbuff~2               ; combout          ;
+; |CNC_driver|always0~5             ; |CNC_driver|always0~5             ; combout          ;
+; |CNC_driver|buffer1[5]~1          ; |CNC_driver|buffer1[5]~1          ; combout          ;
+; |CNC_driver|buffer1~2             ; |CNC_driver|buffer1~2             ; combout          ;
+; |CNC_driver|buffer1~3             ; |CNC_driver|buffer1~3             ; combout          ;
+; |CNC_driver|buffer1~4             ; |CNC_driver|buffer1~4             ; combout          ;
+; |CNC_driver|buffer2[7]~4          ; |CNC_driver|buffer2[7]~4          ; combout          ;
+; |CNC_driver|buffer3[4]~4          ; |CNC_driver|buffer3[4]~4          ; combout          ;
+; |CNC_driver|buffer4~4             ; |CNC_driver|buffer4~4             ; combout          ;
+; |CNC_driver|buffer4[6]~5          ; |CNC_driver|buffer4[6]~5          ; combout          ;
+; |CNC_driver|Nbuff~3               ; |CNC_driver|Nbuff~3               ; combout          ;
+; |CNC_driver|Nbuff~4               ; |CNC_driver|Nbuff~4               ; combout          ;
+; |CNC_driver|Nbuff~5               ; |CNC_driver|Nbuff~5               ; combout          ;
+; |CNC_driver|flag_full~0           ; |CNC_driver|flag_full~0           ; combout          ;
+; |CNC_driver|flag_full~1           ; |CNC_driver|flag_full~1           ; combout          ;
+; |CNC_driver|Equal10~2             ; |CNC_driver|Equal10~2             ; combout          ;
+; |CNC_driver|temp1[0]~0            ; |CNC_driver|temp1[0]~0            ; combout          ;
+; |CNC_driver|temp3~0               ; |CNC_driver|temp3~0               ; combout          ;
+; |CNC_driver|temp1~1               ; |CNC_driver|temp1~1               ; combout          ;
+; |CNC_driver|temp2~0               ; |CNC_driver|temp2~0               ; combout          ;
+; |CNC_driver|wait_to_write~0       ; |CNC_driver|wait_to_write~0       ; combout          ;
+; |CNC_driver|wait_to_write~1       ; |CNC_driver|wait_to_write~1       ; combout          ;
+; |CNC_driver|acc~4                 ; |CNC_driver|acc~4                 ; combout          ;
+; |CNC_driver|wait_to_write~2       ; |CNC_driver|wait_to_write~2       ; combout          ;
+; |CNC_driver|wait_to_write~3       ; |CNC_driver|wait_to_write~3       ; combout          ;
+; |CNC_driver|wait_to_write~4       ; |CNC_driver|wait_to_write~4       ; combout          ;
+; |CNC_driver|wait_to_write~5       ; |CNC_driver|wait_to_write~5       ; combout          ;
+; |CNC_driver|posi~3                ; |CNC_driver|posi~3                ; combout          ;
+; |CNC_driver|posi~4                ; |CNC_driver|posi~4                ; combout          ;
+; |CNC_driver|posi~5                ; |CNC_driver|posi~5                ; combout          ;
+; |CNC_driver|cnt2[15]~0            ; |CNC_driver|cnt2[15]~0            ; combout          ;
+; |CNC_driver|cnt1[4]~0             ; |CNC_driver|cnt1[4]~0             ; combout          ;
+; |CNC_driver|acc~5                 ; |CNC_driver|acc~5                 ; combout          ;
+; |CNC_driver|acc~6                 ; |CNC_driver|acc~6                 ; combout          ;
+; |CNC_driver|temp4[0]~4            ; |CNC_driver|temp4[0]~4            ; combout          ;
+; |CNC_driver|LessThan5~5_wirecell  ; |CNC_driver|LessThan5~5_wirecell  ; combout          ;
+; |CNC_driver|Pulse                 ; |CNC_driver|Pulse                 ; padio            ;
+; |CNC_driver|flag_T                ; |CNC_driver|flag_T                ; padio            ;
+; |CNC_driver|clk1                  ; |CNC_driver|clk1                  ; padio            ;
+; |CNC_driver|pinout                ; |CNC_driver|pinout                ; padio            ;
+; |CNC_driver|acc[0]                ; |CNC_driver|acc[0]                ; padio            ;
+; |CNC_driver|acc[1]                ; |CNC_driver|acc[1]                ; padio            ;
+; |CNC_driver|acc[2]                ; |CNC_driver|acc[2]                ; padio            ;
+; |CNC_driver|acc[3]                ; |CNC_driver|acc[3]                ; padio            ;
+; |CNC_driver|buffer1[1]            ; |CNC_driver|buffer1[1]            ; padio            ;
+; |CNC_driver|buffer1[2]            ; |CNC_driver|buffer1[2]            ; padio            ;
+; |CNC_driver|buffer1[3]            ; |CNC_driver|buffer1[3]            ; padio            ;
+; |CNC_driver|buffer2[0]            ; |CNC_driver|buffer2[0]            ; padio            ;
+; |CNC_driver|buffer2[1]            ; |CNC_driver|buffer2[1]            ; padio            ;
+; |CNC_driver|buffer2[2]            ; |CNC_driver|buffer2[2]            ; padio            ;
+; |CNC_driver|buffer3[0]            ; |CNC_driver|buffer3[0]            ; padio            ;
+; |CNC_driver|buffer3[2]            ; |CNC_driver|buffer3[2]            ; padio            ;
+; |CNC_driver|buffer4[0]            ; |CNC_driver|buffer4[0]            ; padio            ;
+; |CNC_driver|buffer4[1]            ; |CNC_driver|buffer4[1]            ; padio            ;
+; |CNC_driver|Nbuff[0]              ; |CNC_driver|Nbuff[0]              ; padio            ;
+; |CNC_driver|Nbuff[1]              ; |CNC_driver|Nbuff[1]              ; padio            ;
+; |CNC_driver|Nbuff[2]              ; |CNC_driver|Nbuff[2]              ; padio            ;
+; |CNC_driver|flag_full             ; |CNC_driver|flag_full             ; padio            ;
+; |CNC_driver|Nx_temp_test[0]       ; |CNC_driver|Nx_temp_test[0]       ; padio            ;
+; |CNC_driver|Nx_temp_test[1]       ; |CNC_driver|Nx_temp_test[1]       ; padio            ;
+; |CNC_driver|Nx_temp_test[2]       ; |CNC_driver|Nx_temp_test[2]       ; padio            ;
+; |CNC_driver|Nx_temp_test[3]       ; |CNC_driver|Nx_temp_test[3]       ; padio            ;
+; |CNC_driver|temp1[0]              ; |CNC_driver|temp1[0]              ; padio            ;
+; |CNC_driver|temp1[1]              ; |CNC_driver|temp1[1]              ; padio            ;
+; |CNC_driver|temp1[2]              ; |CNC_driver|temp1[2]              ; padio            ;
+; |CNC_driver|temp1[3]              ; |CNC_driver|temp1[3]              ; padio            ;
+; |CNC_driver|temp1[4]              ; |CNC_driver|temp1[4]              ; padio            ;
+; |CNC_driver|temp1[5]              ; |CNC_driver|temp1[5]              ; padio            ;
+; |CNC_driver|temp1[6]              ; |CNC_driver|temp1[6]              ; padio            ;
+; |CNC_driver|temp1[7]              ; |CNC_driver|temp1[7]              ; padio            ;
+; |CNC_driver|temp2[0]              ; |CNC_driver|temp2[0]              ; padio            ;
+; |CNC_driver|temp2[1]              ; |CNC_driver|temp2[1]              ; padio            ;
+; |CNC_driver|temp2[2]              ; |CNC_driver|temp2[2]              ; padio            ;
+; |CNC_driver|temp2[3]              ; |CNC_driver|temp2[3]              ; padio            ;
+; |CNC_driver|temp2[4]              ; |CNC_driver|temp2[4]              ; padio            ;
+; |CNC_driver|temp2[5]              ; |CNC_driver|temp2[5]              ; padio            ;
+; |CNC_driver|temp2[6]              ; |CNC_driver|temp2[6]              ; padio            ;
+; |CNC_driver|temp2[7]              ; |CNC_driver|temp2[7]              ; padio            ;
+; |CNC_driver|temp3[0]              ; |CNC_driver|temp3[0]              ; padio            ;
+; |CNC_driver|temp3[1]              ; |CNC_driver|temp3[1]              ; padio            ;
+; |CNC_driver|temp3[2]              ; |CNC_driver|temp3[2]              ; padio            ;
+; |CNC_driver|temp3[3]              ; |CNC_driver|temp3[3]              ; padio            ;
+; |CNC_driver|temp3[4]              ; |CNC_driver|temp3[4]              ; padio            ;
+; |CNC_driver|temp3[5]              ; |CNC_driver|temp3[5]              ; padio            ;
+; |CNC_driver|temp3[6]              ; |CNC_driver|temp3[6]              ; padio            ;
+; |CNC_driver|temp3[7]              ; |CNC_driver|temp3[7]              ; padio            ;
+; |CNC_driver|temp4[0]              ; |CNC_driver|temp4[0]              ; padio            ;
+; |CNC_driver|temp4[1]              ; |CNC_driver|temp4[1]              ; padio            ;
+; |CNC_driver|temp4[2]              ; |CNC_driver|temp4[2]              ; padio            ;
+; |CNC_driver|temp4[3]              ; |CNC_driver|temp4[3]              ; padio            ;
+; |CNC_driver|temp4[4]              ; |CNC_driver|temp4[4]              ; padio            ;
+; |CNC_driver|temp4[5]              ; |CNC_driver|temp4[5]              ; padio            ;
+; |CNC_driver|temp4[6]              ; |CNC_driver|temp4[6]              ; padio            ;
+; |CNC_driver|temp4[7]              ; |CNC_driver|temp4[7]              ; padio            ;
+; |CNC_driver|allow_once            ; |CNC_driver|allow_once            ; padio            ;
+; |CNC_driver|wait_to_write[0]      ; |CNC_driver|wait_to_write[0]      ; padio            ;
+; |CNC_driver|wait_to_write[1]      ; |CNC_driver|wait_to_write[1]      ; padio            ;
+; |CNC_driver|wait_to_write[2]      ; |CNC_driver|wait_to_write[2]      ; padio            ;
+; |CNC_driver|LS                    ; |CNC_driver|LS~corein             ; combout          ;
+; |CNC_driver|clk                   ; |CNC_driver|clk~corein            ; combout          ;
+; |CNC_driver|Nx[0]                 ; |CNC_driver|Nx[0]~corein          ; combout          ;
+; |CNC_driver|Nx[3]                 ; |CNC_driver|Nx[3]~corein          ; combout          ;
+; |CNC_driver|Nx[2]                 ; |CNC_driver|Nx[2]~corein          ; combout          ;
+; |CNC_driver|Nx[1]                 ; |CNC_driver|Nx[1]~corein          ; combout          ;
+; |CNC_driver|WR                    ; |CNC_driver|WR~corein             ; combout          ;
+; |CNC_driver|clk~clkctrl           ; |CNC_driver|clk~clkctrl           ; outclk           ;
+; |CNC_driver|clk1~reg0clkctrl      ; |CNC_driver|clk1~reg0clkctrl      ; outclk           ;
+; |CNC_driver|posi~4DUPLICATE       ; |CNC_driver|posi~4DUPLICATE       ; combout          ;
+; |CNC_driver|posi[2]~DUPLICATE     ; |CNC_driver|posi[2]~DUPLICATE     ; regout           ;
+; |CNC_driver|Nbuff~2DUPLICATE      ; |CNC_driver|Nbuff~2DUPLICATE      ; combout          ;
+; |CNC_driver|always0~5DUPLICATE    ; |CNC_driver|always0~5DUPLICATE    ; combout          ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |CNC_driver|acc[4]~reg0           ; |CNC_driver|acc[4]~reg0           ; regout           ;
+; |CNC_driver|acc[5]~reg0           ; |CNC_driver|acc[5]~reg0           ; regout           ;
+; |CNC_driver|acc[6]~reg0           ; |CNC_driver|acc[6]~reg0           ; regout           ;
+; |CNC_driver|acc[7]~reg0           ; |CNC_driver|acc[7]~reg0           ; regout           ;
+; |CNC_driver|buffer1[0]~reg0       ; |CNC_driver|buffer1[0]~reg0       ; regout           ;
+; |CNC_driver|buffer1[4]~reg0       ; |CNC_driver|buffer1[4]~reg0       ; regout           ;
+; |CNC_driver|buffer1[5]~reg0       ; |CNC_driver|buffer1[5]~reg0       ; regout           ;
+; |CNC_driver|buffer1[6]~reg0       ; |CNC_driver|buffer1[6]~reg0       ; regout           ;
+; |CNC_driver|buffer1[7]~reg0       ; |CNC_driver|buffer1[7]~reg0       ; regout           ;
+; |CNC_driver|buffer2[3]~reg0       ; |CNC_driver|buffer2[3]~reg0       ; regout           ;
+; |CNC_driver|buffer2[4]~reg0       ; |CNC_driver|buffer2[4]~reg0       ; regout           ;
+; |CNC_driver|buffer2[5]~reg0       ; |CNC_driver|buffer2[5]~reg0       ; regout           ;
+; |CNC_driver|buffer2[6]~reg0       ; |CNC_driver|buffer2[6]~reg0       ; regout           ;
+; |CNC_driver|buffer2[7]~reg0       ; |CNC_driver|buffer2[7]~reg0       ; regout           ;
+; |CNC_driver|buffer3[1]~reg0       ; |CNC_driver|buffer3[1]~reg0       ; regout           ;
+; |CNC_driver|buffer3[3]~reg0       ; |CNC_driver|buffer3[3]~reg0       ; regout           ;
+; |CNC_driver|buffer3[4]~reg0       ; |CNC_driver|buffer3[4]~reg0       ; regout           ;
+; |CNC_driver|buffer3[5]~reg0       ; |CNC_driver|buffer3[5]~reg0       ; regout           ;
+; |CNC_driver|buffer3[6]~reg0       ; |CNC_driver|buffer3[6]~reg0       ; regout           ;
+; |CNC_driver|buffer3[7]~reg0       ; |CNC_driver|buffer3[7]~reg0       ; regout           ;
+; |CNC_driver|buffer4[2]~reg0       ; |CNC_driver|buffer4[2]~reg0       ; regout           ;
+; |CNC_driver|buffer4[3]~reg0       ; |CNC_driver|buffer4[3]~reg0       ; regout           ;
+; |CNC_driver|buffer4[4]~reg0       ; |CNC_driver|buffer4[4]~reg0       ; regout           ;
+; |CNC_driver|buffer4[5]~reg0       ; |CNC_driver|buffer4[5]~reg0       ; regout           ;
+; |CNC_driver|buffer4[6]~reg0       ; |CNC_driver|buffer4[6]~reg0       ; regout           ;
+; |CNC_driver|buffer4[7]~reg0       ; |CNC_driver|buffer4[7]~reg0       ; regout           ;
+; |CNC_driver|wait_to_write[3]~reg0 ; |CNC_driver|wait_to_write[3]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[4]~reg0 ; |CNC_driver|wait_to_write[4]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[5]~reg0 ; |CNC_driver|wait_to_write[5]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[6]~reg0 ; |CNC_driver|wait_to_write[6]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[7]~reg0 ; |CNC_driver|wait_to_write[7]~reg0 ; regout           ;
+; |CNC_driver|Add6~1                ; |CNC_driver|Add6~1                ; sumout           ;
+; |CNC_driver|Add6~1                ; |CNC_driver|Add6~2                ; cout             ;
+; |CNC_driver|Add6~21               ; |CNC_driver|Add6~22               ; cout             ;
+; |CNC_driver|Add6~25               ; |CNC_driver|Add6~25               ; sumout           ;
+; |CNC_driver|Add6~25               ; |CNC_driver|Add6~26               ; cout             ;
+; |CNC_driver|Add6~29               ; |CNC_driver|Add6~29               ; sumout           ;
+; |CNC_driver|Add6~29               ; |CNC_driver|Add6~30               ; cout             ;
+; |CNC_driver|Add6~33               ; |CNC_driver|Add6~33               ; sumout           ;
+; |CNC_driver|cnt2[10]              ; |CNC_driver|cnt2[10]              ; regout           ;
+; |CNC_driver|cnt2[11]              ; |CNC_driver|cnt2[11]              ; regout           ;
+; |CNC_driver|cnt2[12]              ; |CNC_driver|cnt2[12]              ; regout           ;
+; |CNC_driver|cnt2[13]              ; |CNC_driver|cnt2[13]              ; regout           ;
+; |CNC_driver|cnt2[15]              ; |CNC_driver|cnt2[15]              ; regout           ;
+; |CNC_driver|cnt2[14]              ; |CNC_driver|cnt2[14]              ; regout           ;
+; |CNC_driver|cnt2[8]               ; |CNC_driver|cnt2[8]               ; regout           ;
+; |CNC_driver|cnt2[7]               ; |CNC_driver|cnt2[7]               ; regout           ;
+; |CNC_driver|cnt2[9]               ; |CNC_driver|cnt2[9]               ; regout           ;
+; |CNC_driver|cnt1[15]              ; |CNC_driver|cnt1[15]              ; regout           ;
+; |CNC_driver|cnt1[14]              ; |CNC_driver|cnt1[14]              ; regout           ;
+; |CNC_driver|cnt1[13]              ; |CNC_driver|cnt1[13]              ; regout           ;
+; |CNC_driver|cnt1[11]              ; |CNC_driver|cnt1[11]              ; regout           ;
+; |CNC_driver|cnt1[12]              ; |CNC_driver|cnt1[12]              ; regout           ;
+; |CNC_driver|Add7~2                ; |CNC_driver|Add7~2                ; cout             ;
+; |CNC_driver|Add7~5                ; |CNC_driver|Add7~6                ; cout             ;
+; |CNC_driver|Add3~9                ; |CNC_driver|Add3~10               ; cout             ;
+; |CNC_driver|Add3~13               ; |CNC_driver|Add3~13               ; sumout           ;
+; |CNC_driver|Add3~13               ; |CNC_driver|Add3~14               ; cout             ;
+; |CNC_driver|Add3~17               ; |CNC_driver|Add3~17               ; sumout           ;
+; |CNC_driver|Add3~17               ; |CNC_driver|Add3~18               ; cout             ;
+; |CNC_driver|Add3~21               ; |CNC_driver|Add3~21               ; sumout           ;
+; |CNC_driver|Add3~21               ; |CNC_driver|Add3~22               ; cout             ;
+; |CNC_driver|Add3~25               ; |CNC_driver|Add3~25               ; sumout           ;
+; |CNC_driver|Add3~25               ; |CNC_driver|Add3~26               ; cout             ;
+; |CNC_driver|Add3~29               ; |CNC_driver|Add3~29               ; sumout           ;
+; |CNC_driver|Add1~29               ; |CNC_driver|Add1~29               ; sumout           ;
+; |CNC_driver|Add1~29               ; |CNC_driver|Add1~30               ; cout             ;
+; |CNC_driver|Add1~33               ; |CNC_driver|Add1~33               ; sumout           ;
+; |CNC_driver|Add1~33               ; |CNC_driver|Add1~34               ; cout             ;
+; |CNC_driver|Add1~37               ; |CNC_driver|Add1~37               ; sumout           ;
+; |CNC_driver|Add1~37               ; |CNC_driver|Add1~38               ; cout             ;
+; |CNC_driver|Add1~41               ; |CNC_driver|Add1~41               ; sumout           ;
+; |CNC_driver|Add1~41               ; |CNC_driver|Add1~42               ; cout             ;
+; |CNC_driver|Add1~45               ; |CNC_driver|Add1~45               ; sumout           ;
+; |CNC_driver|Add1~45               ; |CNC_driver|Add1~46               ; cout             ;
+; |CNC_driver|Add1~49               ; |CNC_driver|Add1~49               ; sumout           ;
+; |CNC_driver|Add1~49               ; |CNC_driver|Add1~50               ; cout             ;
+; |CNC_driver|Add1~53               ; |CNC_driver|Add1~53               ; sumout           ;
+; |CNC_driver|Add1~53               ; |CNC_driver|Add1~54               ; cout             ;
+; |CNC_driver|Add1~57               ; |CNC_driver|Add1~57               ; sumout           ;
+; |CNC_driver|Add1~57               ; |CNC_driver|Add1~58               ; cout             ;
+; |CNC_driver|Add1~61               ; |CNC_driver|Add1~61               ; sumout           ;
+; |CNC_driver|Add0~45               ; |CNC_driver|Add0~45               ; sumout           ;
+; |CNC_driver|Add0~45               ; |CNC_driver|Add0~46               ; cout             ;
+; |CNC_driver|Add0~49               ; |CNC_driver|Add0~49               ; sumout           ;
+; |CNC_driver|Add0~49               ; |CNC_driver|Add0~50               ; cout             ;
+; |CNC_driver|Add0~53               ; |CNC_driver|Add0~53               ; sumout           ;
+; |CNC_driver|Add0~53               ; |CNC_driver|Add0~54               ; cout             ;
+; |CNC_driver|Add0~57               ; |CNC_driver|Add0~57               ; sumout           ;
+; |CNC_driver|Add0~57               ; |CNC_driver|Add0~58               ; cout             ;
+; |CNC_driver|Add0~61               ; |CNC_driver|Add0~61               ; sumout           ;
+; |CNC_driver|Nx_temp_test~8        ; |CNC_driver|Nx_temp_test~8        ; combout          ;
+; |CNC_driver|Nx_temp_test~9        ; |CNC_driver|Nx_temp_test~9        ; combout          ;
+; |CNC_driver|Nx_temp_test~10       ; |CNC_driver|Nx_temp_test~10       ; combout          ;
+; |CNC_driver|Nx_temp_test~11       ; |CNC_driver|Nx_temp_test~11       ; combout          ;
+; |CNC_driver|Nx_temp_test~12       ; |CNC_driver|Nx_temp_test~12       ; combout          ;
+; |CNC_driver|Nx_temp_test~13       ; |CNC_driver|Nx_temp_test~13       ; combout          ;
+; |CNC_driver|Nx_temp_test~14       ; |CNC_driver|Nx_temp_test~14       ; combout          ;
+; |CNC_driver|Nx_temp_test~15       ; |CNC_driver|Nx_temp_test~15       ; combout          ;
+; |CNC_driver|LessThan5~3           ; |CNC_driver|LessThan5~3           ; combout          ;
+; |CNC_driver|LessThan5~4           ; |CNC_driver|LessThan5~4           ; combout          ;
+; |CNC_driver|LessThan1~0           ; |CNC_driver|LessThan1~0           ; combout          ;
+; |CNC_driver|LessThan1~1           ; |CNC_driver|LessThan1~1           ; combout          ;
+; |CNC_driver|clk1~0                ; |CNC_driver|clk1~0                ; combout          ;
+; |CNC_driver|LessThan0~0           ; |CNC_driver|LessThan0~0           ; combout          ;
+; |CNC_driver|buffer1~0             ; |CNC_driver|buffer1~0             ; combout          ;
+; |CNC_driver|always0~0             ; |CNC_driver|always0~0             ; combout          ;
+; |CNC_driver|buffer2~0             ; |CNC_driver|buffer2~0             ; combout          ;
+; |CNC_driver|Equal11~0             ; |CNC_driver|Equal11~0             ; combout          ;
+; |CNC_driver|Equal10~0             ; |CNC_driver|Equal10~0             ; combout          ;
+; |CNC_driver|buffer3~0             ; |CNC_driver|buffer3~0             ; combout          ;
+; |CNC_driver|Equal12~0             ; |CNC_driver|Equal12~0             ; combout          ;
+; |CNC_driver|buffer3~3             ; |CNC_driver|buffer3~3             ; combout          ;
+; |CNC_driver|buffer4~0             ; |CNC_driver|buffer4~0             ; combout          ;
+; |CNC_driver|buffer4~2             ; |CNC_driver|buffer4~2             ; combout          ;
+; |CNC_driver|buffer4~3             ; |CNC_driver|buffer4~3             ; combout          ;
+; |CNC_driver|buffer1~5             ; |CNC_driver|buffer1~5             ; combout          ;
+; |CNC_driver|buffer1~6             ; |CNC_driver|buffer1~6             ; combout          ;
+; |CNC_driver|buffer1~7             ; |CNC_driver|buffer1~7             ; combout          ;
+; |CNC_driver|buffer1~8             ; |CNC_driver|buffer1~8             ; combout          ;
+; |CNC_driver|buffer2~5             ; |CNC_driver|buffer2~5             ; combout          ;
+; |CNC_driver|buffer2~6             ; |CNC_driver|buffer2~6             ; combout          ;
+; |CNC_driver|buffer2~7             ; |CNC_driver|buffer2~7             ; combout          ;
+; |CNC_driver|buffer2~8             ; |CNC_driver|buffer2~8             ; combout          ;
+; |CNC_driver|buffer3~5             ; |CNC_driver|buffer3~5             ; combout          ;
+; |CNC_driver|buffer3~6             ; |CNC_driver|buffer3~6             ; combout          ;
+; |CNC_driver|buffer3~7             ; |CNC_driver|buffer3~7             ; combout          ;
+; |CNC_driver|buffer3~8             ; |CNC_driver|buffer3~8             ; combout          ;
+; |CNC_driver|buffer4~6             ; |CNC_driver|buffer4~6             ; combout          ;
+; |CNC_driver|buffer4~7             ; |CNC_driver|buffer4~7             ; combout          ;
+; |CNC_driver|buffer4~8             ; |CNC_driver|buffer4~8             ; combout          ;
+; |CNC_driver|wait_to_write~6       ; |CNC_driver|wait_to_write~6       ; combout          ;
+; |CNC_driver|wait_to_write~7       ; |CNC_driver|wait_to_write~7       ; combout          ;
+; |CNC_driver|wait_to_write~8       ; |CNC_driver|wait_to_write~8       ; combout          ;
+; |CNC_driver|wait_to_write~9       ; |CNC_driver|wait_to_write~9       ; combout          ;
+; |CNC_driver|wait_to_write~10      ; |CNC_driver|wait_to_write~10      ; combout          ;
+; |CNC_driver|wait_to_write~11      ; |CNC_driver|wait_to_write~11      ; combout          ;
+; |CNC_driver|wait_to_write~12      ; |CNC_driver|wait_to_write~12      ; combout          ;
+; |CNC_driver|wait_to_write~13      ; |CNC_driver|wait_to_write~13      ; combout          ;
+; |CNC_driver|wait_to_write~14      ; |CNC_driver|wait_to_write~14      ; combout          ;
+; |CNC_driver|wait_to_write~15      ; |CNC_driver|wait_to_write~15      ; combout          ;
+; |CNC_driver|acc[4]                ; |CNC_driver|acc[4]                ; padio            ;
+; |CNC_driver|acc[5]                ; |CNC_driver|acc[5]                ; padio            ;
+; |CNC_driver|acc[6]                ; |CNC_driver|acc[6]                ; padio            ;
+; |CNC_driver|acc[7]                ; |CNC_driver|acc[7]                ; padio            ;
+; |CNC_driver|buffer1[0]            ; |CNC_driver|buffer1[0]            ; padio            ;
+; |CNC_driver|buffer1[4]            ; |CNC_driver|buffer1[4]            ; padio            ;
+; |CNC_driver|buffer1[5]            ; |CNC_driver|buffer1[5]            ; padio            ;
+; |CNC_driver|buffer1[6]            ; |CNC_driver|buffer1[6]            ; padio            ;
+; |CNC_driver|buffer1[7]            ; |CNC_driver|buffer1[7]            ; padio            ;
+; |CNC_driver|buffer2[3]            ; |CNC_driver|buffer2[3]            ; padio            ;
+; |CNC_driver|buffer2[4]            ; |CNC_driver|buffer2[4]            ; padio            ;
+; |CNC_driver|buffer2[5]            ; |CNC_driver|buffer2[5]            ; padio            ;
+; |CNC_driver|buffer2[6]            ; |CNC_driver|buffer2[6]            ; padio            ;
+; |CNC_driver|buffer2[7]            ; |CNC_driver|buffer2[7]            ; padio            ;
+; |CNC_driver|buffer3[1]            ; |CNC_driver|buffer3[1]            ; padio            ;
+; |CNC_driver|buffer3[3]            ; |CNC_driver|buffer3[3]            ; padio            ;
+; |CNC_driver|buffer3[4]            ; |CNC_driver|buffer3[4]            ; padio            ;
+; |CNC_driver|buffer3[5]            ; |CNC_driver|buffer3[5]            ; padio            ;
+; |CNC_driver|buffer3[6]            ; |CNC_driver|buffer3[6]            ; padio            ;
+; |CNC_driver|buffer3[7]            ; |CNC_driver|buffer3[7]            ; padio            ;
+; |CNC_driver|buffer4[2]            ; |CNC_driver|buffer4[2]            ; padio            ;
+; |CNC_driver|buffer4[3]            ; |CNC_driver|buffer4[3]            ; padio            ;
+; |CNC_driver|buffer4[4]            ; |CNC_driver|buffer4[4]            ; padio            ;
+; |CNC_driver|buffer4[5]            ; |CNC_driver|buffer4[5]            ; padio            ;
+; |CNC_driver|buffer4[6]            ; |CNC_driver|buffer4[6]            ; padio            ;
+; |CNC_driver|buffer4[7]            ; |CNC_driver|buffer4[7]            ; padio            ;
+; |CNC_driver|Nx_temp_test[4]       ; |CNC_driver|Nx_temp_test[4]       ; padio            ;
+; |CNC_driver|Nx_temp_test[5]       ; |CNC_driver|Nx_temp_test[5]       ; padio            ;
+; |CNC_driver|Nx_temp_test[6]       ; |CNC_driver|Nx_temp_test[6]       ; padio            ;
+; |CNC_driver|Nx_temp_test[7]       ; |CNC_driver|Nx_temp_test[7]       ; padio            ;
+; |CNC_driver|wait_to_write[3]      ; |CNC_driver|wait_to_write[3]      ; padio            ;
+; |CNC_driver|wait_to_write[4]      ; |CNC_driver|wait_to_write[4]      ; padio            ;
+; |CNC_driver|wait_to_write[5]      ; |CNC_driver|wait_to_write[5]      ; padio            ;
+; |CNC_driver|wait_to_write[6]      ; |CNC_driver|wait_to_write[6]      ; padio            ;
+; |CNC_driver|wait_to_write[7]      ; |CNC_driver|wait_to_write[7]      ; padio            ;
+; |CNC_driver|N[3]                  ; |CNC_driver|N[3]~corein           ; combout          ;
+; |CNC_driver|N[2]                  ; |CNC_driver|N[2]~corein           ; combout          ;
+; |CNC_driver|N[1]                  ; |CNC_driver|N[1]~corein           ; combout          ;
+; |CNC_driver|N[0]                  ; |CNC_driver|N[0]~corein           ; combout          ;
+; |CNC_driver|N[4]                  ; |CNC_driver|N[4]~corein           ; combout          ;
+; |CNC_driver|N[5]                  ; |CNC_driver|N[5]~corein           ; combout          ;
+; |CNC_driver|N[6]                  ; |CNC_driver|N[6]~corein           ; combout          ;
+; |CNC_driver|N[7]                  ; |CNC_driver|N[7]~corein           ; combout          ;
+; |CNC_driver|Nx[5]                 ; |CNC_driver|Nx[5]~corein          ; combout          ;
+; |CNC_driver|Nx[4]                 ; |CNC_driver|Nx[4]~corein          ; combout          ;
+; |CNC_driver|Nx[6]                 ; |CNC_driver|Nx[6]~corein          ; combout          ;
+; |CNC_driver|Nx[7]                 ; |CNC_driver|Nx[7]~corein          ; combout          ;
++-----------------------------------+-----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |CNC_driver|acc[4]~reg0           ; |CNC_driver|acc[4]~reg0           ; regout           ;
+; |CNC_driver|acc[5]~reg0           ; |CNC_driver|acc[5]~reg0           ; regout           ;
+; |CNC_driver|acc[6]~reg0           ; |CNC_driver|acc[6]~reg0           ; regout           ;
+; |CNC_driver|acc[7]~reg0           ; |CNC_driver|acc[7]~reg0           ; regout           ;
+; |CNC_driver|buffer1[0]~reg0       ; |CNC_driver|buffer1[0]~reg0       ; regout           ;
+; |CNC_driver|buffer1[4]~reg0       ; |CNC_driver|buffer1[4]~reg0       ; regout           ;
+; |CNC_driver|buffer1[5]~reg0       ; |CNC_driver|buffer1[5]~reg0       ; regout           ;
+; |CNC_driver|buffer1[6]~reg0       ; |CNC_driver|buffer1[6]~reg0       ; regout           ;
+; |CNC_driver|buffer1[7]~reg0       ; |CNC_driver|buffer1[7]~reg0       ; regout           ;
+; |CNC_driver|buffer2[3]~reg0       ; |CNC_driver|buffer2[3]~reg0       ; regout           ;
+; |CNC_driver|buffer2[4]~reg0       ; |CNC_driver|buffer2[4]~reg0       ; regout           ;
+; |CNC_driver|buffer2[5]~reg0       ; |CNC_driver|buffer2[5]~reg0       ; regout           ;
+; |CNC_driver|buffer2[6]~reg0       ; |CNC_driver|buffer2[6]~reg0       ; regout           ;
+; |CNC_driver|buffer2[7]~reg0       ; |CNC_driver|buffer2[7]~reg0       ; regout           ;
+; |CNC_driver|buffer3[1]~reg0       ; |CNC_driver|buffer3[1]~reg0       ; regout           ;
+; |CNC_driver|buffer3[3]~reg0       ; |CNC_driver|buffer3[3]~reg0       ; regout           ;
+; |CNC_driver|buffer3[4]~reg0       ; |CNC_driver|buffer3[4]~reg0       ; regout           ;
+; |CNC_driver|buffer3[5]~reg0       ; |CNC_driver|buffer3[5]~reg0       ; regout           ;
+; |CNC_driver|buffer3[6]~reg0       ; |CNC_driver|buffer3[6]~reg0       ; regout           ;
+; |CNC_driver|buffer3[7]~reg0       ; |CNC_driver|buffer3[7]~reg0       ; regout           ;
+; |CNC_driver|buffer4[2]~reg0       ; |CNC_driver|buffer4[2]~reg0       ; regout           ;
+; |CNC_driver|buffer4[3]~reg0       ; |CNC_driver|buffer4[3]~reg0       ; regout           ;
+; |CNC_driver|buffer4[4]~reg0       ; |CNC_driver|buffer4[4]~reg0       ; regout           ;
+; |CNC_driver|buffer4[5]~reg0       ; |CNC_driver|buffer4[5]~reg0       ; regout           ;
+; |CNC_driver|buffer4[6]~reg0       ; |CNC_driver|buffer4[6]~reg0       ; regout           ;
+; |CNC_driver|buffer4[7]~reg0       ; |CNC_driver|buffer4[7]~reg0       ; regout           ;
+; |CNC_driver|wait_to_write[3]~reg0 ; |CNC_driver|wait_to_write[3]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[4]~reg0 ; |CNC_driver|wait_to_write[4]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[5]~reg0 ; |CNC_driver|wait_to_write[5]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[6]~reg0 ; |CNC_driver|wait_to_write[6]~reg0 ; regout           ;
+; |CNC_driver|wait_to_write[7]~reg0 ; |CNC_driver|wait_to_write[7]~reg0 ; regout           ;
+; |CNC_driver|Add6~1                ; |CNC_driver|Add6~1                ; sumout           ;
+; |CNC_driver|Add6~1                ; |CNC_driver|Add6~2                ; cout             ;
+; |CNC_driver|Add6~21               ; |CNC_driver|Add6~22               ; cout             ;
+; |CNC_driver|Add6~25               ; |CNC_driver|Add6~25               ; sumout           ;
+; |CNC_driver|Add6~25               ; |CNC_driver|Add6~26               ; cout             ;
+; |CNC_driver|Add6~29               ; |CNC_driver|Add6~29               ; sumout           ;
+; |CNC_driver|Add6~29               ; |CNC_driver|Add6~30               ; cout             ;
+; |CNC_driver|Add6~33               ; |CNC_driver|Add6~33               ; sumout           ;
+; |CNC_driver|cnt2[10]              ; |CNC_driver|cnt2[10]              ; regout           ;
+; |CNC_driver|cnt2[11]              ; |CNC_driver|cnt2[11]              ; regout           ;
+; |CNC_driver|cnt2[12]              ; |CNC_driver|cnt2[12]              ; regout           ;
+; |CNC_driver|cnt2[13]              ; |CNC_driver|cnt2[13]              ; regout           ;
+; |CNC_driver|cnt2[15]              ; |CNC_driver|cnt2[15]              ; regout           ;
+; |CNC_driver|cnt2[14]              ; |CNC_driver|cnt2[14]              ; regout           ;
+; |CNC_driver|cnt2[8]               ; |CNC_driver|cnt2[8]               ; regout           ;
+; |CNC_driver|cnt2[7]               ; |CNC_driver|cnt2[7]               ; regout           ;
+; |CNC_driver|cnt2[9]               ; |CNC_driver|cnt2[9]               ; regout           ;
+; |CNC_driver|cnt1[15]              ; |CNC_driver|cnt1[15]              ; regout           ;
+; |CNC_driver|cnt1[14]              ; |CNC_driver|cnt1[14]              ; regout           ;
+; |CNC_driver|cnt1[13]              ; |CNC_driver|cnt1[13]              ; regout           ;
+; |CNC_driver|cnt1[11]              ; |CNC_driver|cnt1[11]              ; regout           ;
+; |CNC_driver|cnt1[12]              ; |CNC_driver|cnt1[12]              ; regout           ;
+; |CNC_driver|Add7~2                ; |CNC_driver|Add7~2                ; cout             ;
+; |CNC_driver|Add7~5                ; |CNC_driver|Add7~6                ; cout             ;
+; |CNC_driver|Add3~9                ; |CNC_driver|Add3~10               ; cout             ;
+; |CNC_driver|Add3~13               ; |CNC_driver|Add3~13               ; sumout           ;
+; |CNC_driver|Add3~13               ; |CNC_driver|Add3~14               ; cout             ;
+; |CNC_driver|Add3~17               ; |CNC_driver|Add3~17               ; sumout           ;
+; |CNC_driver|Add3~17               ; |CNC_driver|Add3~18               ; cout             ;
+; |CNC_driver|Add3~21               ; |CNC_driver|Add3~21               ; sumout           ;
+; |CNC_driver|Add3~21               ; |CNC_driver|Add3~22               ; cout             ;
+; |CNC_driver|Add3~25               ; |CNC_driver|Add3~25               ; sumout           ;
+; |CNC_driver|Add3~25               ; |CNC_driver|Add3~26               ; cout             ;
+; |CNC_driver|Add3~29               ; |CNC_driver|Add3~29               ; sumout           ;
+; |CNC_driver|Add1~29               ; |CNC_driver|Add1~29               ; sumout           ;
+; |CNC_driver|Add1~29               ; |CNC_driver|Add1~30               ; cout             ;
+; |CNC_driver|Add1~33               ; |CNC_driver|Add1~33               ; sumout           ;
+; |CNC_driver|Add1~33               ; |CNC_driver|Add1~34               ; cout             ;
+; |CNC_driver|Add1~37               ; |CNC_driver|Add1~37               ; sumout           ;
+; |CNC_driver|Add1~37               ; |CNC_driver|Add1~38               ; cout             ;
+; |CNC_driver|Add1~41               ; |CNC_driver|Add1~41               ; sumout           ;
+; |CNC_driver|Add1~41               ; |CNC_driver|Add1~42               ; cout             ;
+; |CNC_driver|Add1~45               ; |CNC_driver|Add1~45               ; sumout           ;
+; |CNC_driver|Add1~45               ; |CNC_driver|Add1~46               ; cout             ;
+; |CNC_driver|Add1~49               ; |CNC_driver|Add1~49               ; sumout           ;
+; |CNC_driver|Add1~49               ; |CNC_driver|Add1~50               ; cout             ;
+; |CNC_driver|Add1~53               ; |CNC_driver|Add1~53               ; sumout           ;
+; |CNC_driver|Add1~53               ; |CNC_driver|Add1~54               ; cout             ;
+; |CNC_driver|Add1~57               ; |CNC_driver|Add1~57               ; sumout           ;
+; |CNC_driver|Add1~57               ; |CNC_driver|Add1~58               ; cout             ;
+; |CNC_driver|Add1~61               ; |CNC_driver|Add1~61               ; sumout           ;
+; |CNC_driver|Add0~45               ; |CNC_driver|Add0~45               ; sumout           ;
+; |CNC_driver|Add0~45               ; |CNC_driver|Add0~46               ; cout             ;
+; |CNC_driver|Add0~49               ; |CNC_driver|Add0~49               ; sumout           ;
+; |CNC_driver|Add0~49               ; |CNC_driver|Add0~50               ; cout             ;
+; |CNC_driver|Add0~53               ; |CNC_driver|Add0~53               ; sumout           ;
+; |CNC_driver|Add0~53               ; |CNC_driver|Add0~54               ; cout             ;
+; |CNC_driver|Add0~57               ; |CNC_driver|Add0~57               ; sumout           ;
+; |CNC_driver|Add0~57               ; |CNC_driver|Add0~58               ; cout             ;
+; |CNC_driver|Add0~61               ; |CNC_driver|Add0~61               ; sumout           ;
+; |CNC_driver|Nx_temp_test~8        ; |CNC_driver|Nx_temp_test~8        ; combout          ;
+; |CNC_driver|Nx_temp_test~9        ; |CNC_driver|Nx_temp_test~9        ; combout          ;
+; |CNC_driver|Nx_temp_test~10       ; |CNC_driver|Nx_temp_test~10       ; combout          ;
+; |CNC_driver|Nx_temp_test~11       ; |CNC_driver|Nx_temp_test~11       ; combout          ;
+; |CNC_driver|Nx_temp_test~12       ; |CNC_driver|Nx_temp_test~12       ; combout          ;
+; |CNC_driver|Nx_temp_test~13       ; |CNC_driver|Nx_temp_test~13       ; combout          ;
+; |CNC_driver|Nx_temp_test~14       ; |CNC_driver|Nx_temp_test~14       ; combout          ;
+; |CNC_driver|Nx_temp_test~15       ; |CNC_driver|Nx_temp_test~15       ; combout          ;
+; |CNC_driver|LessThan5~3           ; |CNC_driver|LessThan5~3           ; combout          ;
+; |CNC_driver|LessThan5~4           ; |CNC_driver|LessThan5~4           ; combout          ;
+; |CNC_driver|LessThan1~0           ; |CNC_driver|LessThan1~0           ; combout          ;
+; |CNC_driver|LessThan1~1           ; |CNC_driver|LessThan1~1           ; combout          ;
+; |CNC_driver|clk1~0                ; |CNC_driver|clk1~0                ; combout          ;
+; |CNC_driver|LessThan0~0           ; |CNC_driver|LessThan0~0           ; combout          ;
+; |CNC_driver|buffer1~0             ; |CNC_driver|buffer1~0             ; combout          ;
+; |CNC_driver|always0~0             ; |CNC_driver|always0~0             ; combout          ;
+; |CNC_driver|buffer2~0             ; |CNC_driver|buffer2~0             ; combout          ;
+; |CNC_driver|Equal11~0             ; |CNC_driver|Equal11~0             ; combout          ;
+; |CNC_driver|Equal10~0             ; |CNC_driver|Equal10~0             ; combout          ;
+; |CNC_driver|buffer3~0             ; |CNC_driver|buffer3~0             ; combout          ;
+; |CNC_driver|Equal12~0             ; |CNC_driver|Equal12~0             ; combout          ;
+; |CNC_driver|buffer3~3             ; |CNC_driver|buffer3~3             ; combout          ;
+; |CNC_driver|buffer4~0             ; |CNC_driver|buffer4~0             ; combout          ;
+; |CNC_driver|buffer4~2             ; |CNC_driver|buffer4~2             ; combout          ;
+; |CNC_driver|buffer4~3             ; |CNC_driver|buffer4~3             ; combout          ;
+; |CNC_driver|buffer1~5             ; |CNC_driver|buffer1~5             ; combout          ;
+; |CNC_driver|buffer1~6             ; |CNC_driver|buffer1~6             ; combout          ;
+; |CNC_driver|buffer1~7             ; |CNC_driver|buffer1~7             ; combout          ;
+; |CNC_driver|buffer1~8             ; |CNC_driver|buffer1~8             ; combout          ;
+; |CNC_driver|buffer2~5             ; |CNC_driver|buffer2~5             ; combout          ;
+; |CNC_driver|buffer2~6             ; |CNC_driver|buffer2~6             ; combout          ;
+; |CNC_driver|buffer2~7             ; |CNC_driver|buffer2~7             ; combout          ;
+; |CNC_driver|buffer2~8             ; |CNC_driver|buffer2~8             ; combout          ;
+; |CNC_driver|buffer3~5             ; |CNC_driver|buffer3~5             ; combout          ;
+; |CNC_driver|buffer3~6             ; |CNC_driver|buffer3~6             ; combout          ;
+; |CNC_driver|buffer3~7             ; |CNC_driver|buffer3~7             ; combout          ;
+; |CNC_driver|buffer3~8             ; |CNC_driver|buffer3~8             ; combout          ;
+; |CNC_driver|buffer4~6             ; |CNC_driver|buffer4~6             ; combout          ;
+; |CNC_driver|buffer4~7             ; |CNC_driver|buffer4~7             ; combout          ;
+; |CNC_driver|buffer4~8             ; |CNC_driver|buffer4~8             ; combout          ;
+; |CNC_driver|wait_to_write~6       ; |CNC_driver|wait_to_write~6       ; combout          ;
+; |CNC_driver|wait_to_write~7       ; |CNC_driver|wait_to_write~7       ; combout          ;
+; |CNC_driver|wait_to_write~8       ; |CNC_driver|wait_to_write~8       ; combout          ;
+; |CNC_driver|wait_to_write~9       ; |CNC_driver|wait_to_write~9       ; combout          ;
+; |CNC_driver|wait_to_write~10      ; |CNC_driver|wait_to_write~10      ; combout          ;
+; |CNC_driver|wait_to_write~11      ; |CNC_driver|wait_to_write~11      ; combout          ;
+; |CNC_driver|wait_to_write~12      ; |CNC_driver|wait_to_write~12      ; combout          ;
+; |CNC_driver|wait_to_write~13      ; |CNC_driver|wait_to_write~13      ; combout          ;
+; |CNC_driver|wait_to_write~14      ; |CNC_driver|wait_to_write~14      ; combout          ;
+; |CNC_driver|wait_to_write~15      ; |CNC_driver|wait_to_write~15      ; combout          ;
+; |CNC_driver|acc[4]                ; |CNC_driver|acc[4]                ; padio            ;
+; |CNC_driver|acc[5]                ; |CNC_driver|acc[5]                ; padio            ;
+; |CNC_driver|acc[6]                ; |CNC_driver|acc[6]                ; padio            ;
+; |CNC_driver|acc[7]                ; |CNC_driver|acc[7]                ; padio            ;
+; |CNC_driver|buffer1[0]            ; |CNC_driver|buffer1[0]            ; padio            ;
+; |CNC_driver|buffer1[4]            ; |CNC_driver|buffer1[4]            ; padio            ;
+; |CNC_driver|buffer1[5]            ; |CNC_driver|buffer1[5]            ; padio            ;
+; |CNC_driver|buffer1[6]            ; |CNC_driver|buffer1[6]            ; padio            ;
+; |CNC_driver|buffer1[7]            ; |CNC_driver|buffer1[7]            ; padio            ;
+; |CNC_driver|buffer2[3]            ; |CNC_driver|buffer2[3]            ; padio            ;
+; |CNC_driver|buffer2[4]            ; |CNC_driver|buffer2[4]            ; padio            ;
+; |CNC_driver|buffer2[5]            ; |CNC_driver|buffer2[5]            ; padio            ;
+; |CNC_driver|buffer2[6]            ; |CNC_driver|buffer2[6]            ; padio            ;
+; |CNC_driver|buffer2[7]            ; |CNC_driver|buffer2[7]            ; padio            ;
+; |CNC_driver|buffer3[1]            ; |CNC_driver|buffer3[1]            ; padio            ;
+; |CNC_driver|buffer3[3]            ; |CNC_driver|buffer3[3]            ; padio            ;
+; |CNC_driver|buffer3[4]            ; |CNC_driver|buffer3[4]            ; padio            ;
+; |CNC_driver|buffer3[5]            ; |CNC_driver|buffer3[5]            ; padio            ;
+; |CNC_driver|buffer3[6]            ; |CNC_driver|buffer3[6]            ; padio            ;
+; |CNC_driver|buffer3[7]            ; |CNC_driver|buffer3[7]            ; padio            ;
+; |CNC_driver|buffer4[2]            ; |CNC_driver|buffer4[2]            ; padio            ;
+; |CNC_driver|buffer4[3]            ; |CNC_driver|buffer4[3]            ; padio            ;
+; |CNC_driver|buffer4[4]            ; |CNC_driver|buffer4[4]            ; padio            ;
+; |CNC_driver|buffer4[5]            ; |CNC_driver|buffer4[5]            ; padio            ;
+; |CNC_driver|buffer4[6]            ; |CNC_driver|buffer4[6]            ; padio            ;
+; |CNC_driver|buffer4[7]            ; |CNC_driver|buffer4[7]            ; padio            ;
+; |CNC_driver|Nx_temp_test[4]       ; |CNC_driver|Nx_temp_test[4]       ; padio            ;
+; |CNC_driver|Nx_temp_test[5]       ; |CNC_driver|Nx_temp_test[5]       ; padio            ;
+; |CNC_driver|Nx_temp_test[6]       ; |CNC_driver|Nx_temp_test[6]       ; padio            ;
+; |CNC_driver|Nx_temp_test[7]       ; |CNC_driver|Nx_temp_test[7]       ; padio            ;
+; |CNC_driver|wait_to_write[3]      ; |CNC_driver|wait_to_write[3]      ; padio            ;
+; |CNC_driver|wait_to_write[4]      ; |CNC_driver|wait_to_write[4]      ; padio            ;
+; |CNC_driver|wait_to_write[5]      ; |CNC_driver|wait_to_write[5]      ; padio            ;
+; |CNC_driver|wait_to_write[6]      ; |CNC_driver|wait_to_write[6]      ; padio            ;
+; |CNC_driver|wait_to_write[7]      ; |CNC_driver|wait_to_write[7]      ; padio            ;
+; |CNC_driver|N[3]                  ; |CNC_driver|N[3]~corein           ; combout          ;
+; |CNC_driver|N[2]                  ; |CNC_driver|N[2]~corein           ; combout          ;
+; |CNC_driver|N[1]                  ; |CNC_driver|N[1]~corein           ; combout          ;
+; |CNC_driver|N[0]                  ; |CNC_driver|N[0]~corein           ; combout          ;
+; |CNC_driver|N[4]                  ; |CNC_driver|N[4]~corein           ; combout          ;
+; |CNC_driver|N[5]                  ; |CNC_driver|N[5]~corein           ; combout          ;
+; |CNC_driver|N[6]                  ; |CNC_driver|N[6]~corein           ; combout          ;
+; |CNC_driver|N[7]                  ; |CNC_driver|N[7]~corein           ; combout          ;
+; |CNC_driver|Nx[5]                 ; |CNC_driver|Nx[5]~corein          ; combout          ;
+; |CNC_driver|Nx[4]                 ; |CNC_driver|Nx[4]~corein          ; combout          ;
+; |CNC_driver|Nx[6]                 ; |CNC_driver|Nx[6]~corein          ; combout          ;
+; |CNC_driver|Nx[7]                 ; |CNC_driver|Nx[7]~corein          ; combout          ;
++-----------------------------------+-----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sat Mar 29 15:11:45 2025
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off CNC_driver -c CNC_driver
+Info: Using vector source file "C:/altera/91sp2/quartus/CNC driver/CNC_driver.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[7]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[6]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[4]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[3]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[2]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Nx_temp[0]" in design.
+Info: Inverted registers were found during simulation
+    Info: Register: |CNC_driver|posi[0]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      61.08 %
+Info: Number of transitions in simulation is 559634
+Info: Quartus II Simulator was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sat Mar 29 15:11:47 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
