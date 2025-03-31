@@ -1,4 +1,4 @@
-# [System Verilog] Pulse generator for servo in CNC applications using DDA (Digital Differential Analyzer) interpolation algorithm
+# [Verilog HDL] Pulse generator for servo in CNC applications using DDA (Digital Differential Analyzer) interpolation algorithm
 
 This is a mini project in embedded control system course. This is an implementation for 1 axis with DDA algorithm. The same technique could be applied to following axis. 
 
